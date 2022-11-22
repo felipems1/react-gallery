@@ -28,7 +28,6 @@ const App = () => {
     if (file && file.size > 0) {
       setUploading(true);
       let result = await Photos.insert(file);
-
       setUploading(false);
 
       if (result instanceof Error) {
@@ -41,7 +40,7 @@ const App = () => {
     }
   };
 
-  const handleDeleta = async (name: string) => {
+  const handleDeleteClick = async (name: string) => {
     await Photos.del(name);
     getPhotos();
   };
@@ -59,7 +58,7 @@ const App = () => {
 
         {loading && (
           <C.ScreenWarning>
-            <div className="emoji">✋</div>
+            <div className="emoji">🤚</div>
             <div>Carregando...</div>
           </C.ScreenWarning>
         )}
@@ -71,7 +70,7 @@ const App = () => {
                 key={index}
                 url={item.url}
                 name={item.name}
-                handleDeleta={handleDeleta}
+                handleDeleta={handleDeleteClick}
               />
             ))}
           </C.PhotoList>
@@ -79,7 +78,7 @@ const App = () => {
 
         {!loading && photos.length === 0 && (
           <C.ScreenWarning>
-            <div className="emoji">☹️</div>
+            <div className="emoji">😞</div>
             <div>Não há fotos cadastradas.</div>
           </C.ScreenWarning>
         )}
