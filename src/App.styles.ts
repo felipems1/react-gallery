@@ -21,12 +21,16 @@ export const Header = styled.h1`
 
 export const ScreenWarning = styled.div`
   text-align: center;
-
-  .emoji {
-    font-size: 50px;
-    margin-bottom: 20px;
-  }
 `;
+
+export const Emoji = styled.div`
+  font-size: 50px;
+  margin-bottom: 20px;
+`;
+
+export const Loading = styled.div``;
+
+export const NotPhoto = styled.div``;
 
 export const PhotoList = styled.div`
   display: grid;
@@ -49,21 +53,6 @@ export const UploadForm = styled.form`
   border-radius: 10px;
   margin-bottom: 30px;
 
-  input[type="submit"] {
-    background-color: #756df4;
-    border: 0;
-    color: #fff;
-    padding: 8px 16px;
-    font-size: 15px;
-    border-radius: 10px;
-    margin: 0 20px;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 0.9;
-    }
-  }
-
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -72,5 +61,22 @@ export const UploadForm = styled.form`
     gap: 12px;
     margin-left: 20px;
     margin-right: 20px;
+  }
+`;
+
+export const File = styled.input``;
+
+export const Submit = styled.input`
+  background-color: #756df4;
+  border: 0;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 15px;
+  border-radius: 10px;
+  margin: 0 20px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
   }
 `;

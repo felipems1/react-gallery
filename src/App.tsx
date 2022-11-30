@@ -1,8 +1,8 @@
 import { useState, useEffect, FormEvent } from "react";
 import * as C from "./App.styles";
 import * as Photos from "./services/photos";
-import { Photo } from "./types/Photo";
-import { PhotoItem } from "./components/PhotoItem";
+import Photo from "./types/Photo";
+import PhotoItem from "./components/PhotoItem";
 
 const App = () => {
   const [uploading, setUploading] = useState(false);
@@ -51,15 +51,15 @@ const App = () => {
         <C.Header>Galeria de Fotos</C.Header>
 
         <C.UploadForm method="POST" onSubmit={handleFormSubmit}>
-          <input type="file" name="image" />
-          <input type="submit" value="Enviar" />
+          <C.File type="file" name="image" />
+          <C.Submit type="submit" value="Enviar" />
           {uploading && "Enviando..."}
         </C.UploadForm>
 
         {loading && (
           <C.ScreenWarning>
-            <div className="emoji">🤚</div>
-            <div>Carregando...</div>
+            <C.Emoji>🤚</C.Emoji>
+            <C.Loading>Carregando...</C.Loading>
           </C.ScreenWarning>
         )}
 
@@ -78,8 +78,8 @@ const App = () => {
 
         {!loading && photos.length === 0 && (
           <C.ScreenWarning>
-            <div className="emoji">😞</div>
-            <div>Não há fotos cadastradas.</div>
+            <C.Emoji>😞</C.Emoji>
+            <C.NotPhoto>Não há fotos cadastradas.</C.NotPhoto>
           </C.ScreenWarning>
         )}
       </C.Area>

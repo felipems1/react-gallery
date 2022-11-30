@@ -1,4 +1,4 @@
-import { Photo } from "../types/Photo";
+import Photo from "../types/Photo";
 import { storage } from "../libs/firebase";
 import {
   ref,

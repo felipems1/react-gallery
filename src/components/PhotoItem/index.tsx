@@ -1,4 +1,3 @@
-import { Photo } from "../../types/Photo";
 import * as C from "./styles";
 
 type Props = {
@@ -7,11 +6,12 @@ type Props = {
   handleDeleta: (name: string) => void;
 };
 
-export const PhotoItem = ({ url, name, handleDeleta }: Props) => {
+const PhotoItem = ({ url, name, handleDeleta }: Props) => {
   return (
     <C.Container>
-      <img src={url} alt={name} />
-      <button onClick={() => handleDeleta(name)}>Excluir</button>
+      <C.Photo src={url} alt={name} />
+      <C.Button onClick={() => handleDeleta(name)}>Excluir</C.Button>
     </C.Container>
   );
 };
+export default PhotoItem;
