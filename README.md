@@ -24,7 +24,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Você pode visualizar o projeto através [DESSE LINK](https://gallery-da9f9.web.app/).
+Você pode visualizar o projeto através [DESSE LINK](https://app-galeria-fotos.netlify.app/).
 
 ---
 
